@@ -1,0 +1,1 @@
+# KrishiShare---A-Digital-Platform-for-Agriculture-Equipment-and-Labour-Sharing-
