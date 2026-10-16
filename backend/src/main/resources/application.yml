@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/agrishare}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  sql:
+    init:
+      mode: never
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 1
+    validate-on-migrate: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+agrishare:
+  jwt-secret: ${JWT_SECRET:change-this-development-secret-to-a-long-random-value}
+  ai-service-url: ${AI_SERVICE_URL:http://localhost:8001}
+  open-meteo-url: ${OPEN_METEO_URL:https://api.open-meteo.com/v1/forecast}
+  razorpay-key-id: ${RAZORPAY_KEY_ID:}
+  razorpay-key-secret: ${RAZORPAY_KEY_SECRET:}

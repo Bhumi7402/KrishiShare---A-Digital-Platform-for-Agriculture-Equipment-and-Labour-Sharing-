@@ -1,0 +1,2 @@
+ALTER TABLE providers
+    ADD COLUMN IF NOT EXISTS verification_status VARCHAR(20) NOT NULL DEFAULT 'PENDING';
